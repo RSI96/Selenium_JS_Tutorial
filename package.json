@@ -1,0 +1,22 @@
+{
+  "name": "selenium_js_tutorial",
+  "version": "1.0.0",
+  "description": "This repository contains files from 'Selenium with JavaScript' tutorial.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RSI96/Selenium_JS_Tutorial.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RSI96/Selenium_JS_Tutorial/issues"
+  },
+  "homepage": "https://github.com/RSI96/Selenium_JS_Tutorial#readme",
+  "dependencies": {
+    "selenium-webdriver": "^4.4.0"
+  }
+}

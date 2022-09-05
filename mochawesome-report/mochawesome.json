@@ -1,0 +1,216 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-09-05T13:30:26.260Z",
+    "end": "2022-09-05T13:30:54.069Z",
+    "duration": 27809,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "df0edc1a-0516-4411-bb2d-5d78fc46980a",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "16723fc2-906b-4a32-a8b7-99eef4104bfa",
+          "title": "Test search functionality of Find Owners tab",
+          "fullFile": "C:\\_myFiles\\Tutorials\\Selenium_JS_Tutorial\\tests\\FirstTestMocha.js",
+          "file": "\\tests\\FirstTestMocha.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Search Franklin surname",
+              "fullTitle": "Test search functionality of Find Owners tab Search Franklin surname",
+              "timedOut": null,
+              "duration": 11096,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const linkToMainPage = \"http://petclinic.eastus.cloudapp.azure.com:8888/\";\n//launch a browser\nlet driver = await new Builder().forBrowser(\"firefox\").build();\n    \n//navigate to an app\nawait driver.get(linkToMainPage)\n\n//do sth\nawait driver.findElement(By.xpath(\"/html/body/nav/div/div/ul/li[2]/a\")).click();\nawait driver.findElement(By.xpath(\"/html/body/div/div/form/div[1]/div/div/input\")).sendKeys(\"Franklin\", Key.RETURN);\nawait driver.sleep(2000);\n\n//assert def\nlet petName = await driver.findElement(By.xpath(\"/html/body/div/div/table[2]/tbody/tr/td[1]/dl/dd[1]\")).getText()\n    .then(function(value) {\n        return value;\n    })\n    \n//assert plain selenium\n//assert.strictEqual(petName, \"Leo\");\n    \n//assert chai\npetName.should.equal(\"Leo\");\n    \n//close a browser\nawait driver.quit();",
+              "err": {},
+              "uuid": "5848b429-14c1-4007-835f-5c812835de7c",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5848b429-14c1-4007-835f-5c812835de7c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11096,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "9312ce69-8da3-48d6-88d2-aa9362f24ab3",
+          "title": "-------SECOND INSTANCE--------Test search functionality of Find Owners tab ",
+          "fullFile": "C:\\_myFiles\\Tutorials\\Selenium_JS_Tutorial\\tests\\SecondTestMocha.js",
+          "file": "\\tests\\SecondTestMocha.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Search Franklin surname",
+              "fullTitle": "-------SECOND INSTANCE--------Test search functionality of Find Owners tab  Search Franklin surname",
+              "timedOut": null,
+              "duration": 11298,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const linkToMainPage = \"http://petclinic.eastus.cloudapp.azure.com:8888/\";\n//launch a browser\nlet driver = await new Builder().forBrowser(\"firefox\").build();\n    \n//navigate to an app\nawait driver.get(linkToMainPage)\n\n//do sth\nawait driver.findElement(By.xpath(\"/html/body/nav/div/div/ul/li[2]/a\")).click();\nawait driver.findElement(By.xpath(\"/html/body/div/div/form/div[1]/div/div/input\")).sendKeys(\"Franklin\", Key.RETURN);\nawait driver.sleep(2000);\n\n//assert def\nlet petName = await driver.findElement(By.xpath(\"/html/body/div/div/table[2]/tbody/tr/td[1]/dl/dd[1]\")).getText()\n    .then(function(value) {\n        return value;\n    })\n    \n//assert plain selenium\n//assert.strictEqual(petName, \"Leo\");\n    \n//assert chai\npetName.should.equal(\"Leo\");\n    \n//close a browser\nawait driver.quit();",
+              "err": {},
+              "uuid": "c46a1f29-729c-46a2-b886-3d5ff3b3ef69",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c46a1f29-729c-46a2-b886-3d5ff3b3ef69"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11298,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "ca763459-23e6-469a-a76a-bcc1b70c8eb6",
+          "title": "-------SECOND INSTANCE--------Test search functionality of Find Owners tab ",
+          "fullFile": "C:\\_myFiles\\Tutorials\\Selenium_JS_Tutorial\\tests\\ThirdTestMocha.js",
+          "file": "\\tests\\ThirdTestMocha.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Search Franklin surname",
+              "fullTitle": "-------SECOND INSTANCE--------Test search functionality of Find Owners tab  Search Franklin surname",
+              "timedOut": null,
+              "duration": 10416,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const linkToMainPage = \"http://petclinic.eastus.cloudapp.azure.com:8888/\";\n//launch a browser\nlet driver = await new Builder().forBrowser(\"firefox\").build();\n        \n//navigate to an app\nawait driver.get(linkToMainPage)\n\n//do sth\nawait driver.findElement(By.xpath(\"/html/body/nav/div/div/ul/li[2]/a\")).click();\nawait driver.findElement(By.xpath(\"/html/body/div/div/form/div[1]/div/div/input\")).sendKeys(arg, Key.RETURN);\nawait driver.sleep(2000);\n\n//assert def\nlet petName = await driver.findElement(By.xpath(\"/html/body/div/div/table[2]/tbody/tr/td[1]/dl/dd[1]\")).getText()\n    .then(function(value) {\n        return value;\n    })\n//assert chai\npetName.should.equal(expected);\n        \n//close a browser\nawait driver.quit();",
+              "err": {},
+              "uuid": "da87a166-b507-4087-8356-c10ad8390a1c",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search Rodriquez surname",
+              "fullTitle": "-------SECOND INSTANCE--------Test search functionality of Find Owners tab  Search Rodriquez surname",
+              "timedOut": null,
+              "duration": 7669,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const linkToMainPage = \"http://petclinic.eastus.cloudapp.azure.com:8888/\";\n//launch a browser\nlet driver = await new Builder().forBrowser(\"firefox\").build();\n        \n//navigate to an app\nawait driver.get(linkToMainPage)\n\n//do sth\nawait driver.findElement(By.xpath(\"/html/body/nav/div/div/ul/li[2]/a\")).click();\nawait driver.findElement(By.xpath(\"/html/body/div/div/form/div[1]/div/div/input\")).sendKeys(arg, Key.RETURN);\nawait driver.sleep(2000);\n\n//assert def\nlet petName = await driver.findElement(By.xpath(\"/html/body/div/div/table[2]/tbody/tr/td[1]/dl/dd[1]\")).getText()\n    .then(function(value) {\n        return value;\n    })\n//assert chai\npetName.should.equal(expected);\n        \n//close a browser\nawait driver.quit();",
+              "err": {},
+              "uuid": "1cec953e-aad7-42ad-9053-fe252c374aee",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search McTavish surname",
+              "fullTitle": "-------SECOND INSTANCE--------Test search functionality of Find Owners tab  Search McTavish surname",
+              "timedOut": null,
+              "duration": 9026,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const linkToMainPage = \"http://petclinic.eastus.cloudapp.azure.com:8888/\";\n//launch a browser\nlet driver = await new Builder().forBrowser(\"firefox\").build();\n        \n//navigate to an app\nawait driver.get(linkToMainPage)\n\n//do sth\nawait driver.findElement(By.xpath(\"/html/body/nav/div/div/ul/li[2]/a\")).click();\nawait driver.findElement(By.xpath(\"/html/body/div/div/form/div[1]/div/div/input\")).sendKeys(arg, Key.RETURN);\nawait driver.sleep(2000);\n\n//assert def\nlet petName = await driver.findElement(By.xpath(\"/html/body/div/div/table[2]/tbody/tr/td[1]/dl/dd[1]\")).getText()\n    .then(function(value) {\n        return value;\n    })\n//assert chai\npetName.should.equal(expected);\n        \n//close a browser\nawait driver.quit();",
+              "err": {},
+              "uuid": "1c727658-9f84-4a7c-83a6-c30ecefff165",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "da87a166-b507-4087-8356-c10ad8390a1c",
+            "1cec953e-aad7-42ad-9053-fe252c374aee",
+            "1c727658-9f84-4a7c-83a6-c30ecefff165"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 27111,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.0.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

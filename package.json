@@ -4,7 +4,7 @@
   "description": "This repository contains files from 'Selenium with JavaScript' tutorial.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --no-timeouts 'tests/*.js'"
+    "test": "mocha --no-timeouts --parallel 'tests/*.js'"
   },
   "repository": {
     "type": "git",

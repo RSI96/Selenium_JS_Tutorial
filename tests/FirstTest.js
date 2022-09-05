@@ -1,6 +1,9 @@
 const { By, Key } = require("selenium-webdriver");
 const { Builder } = require("selenium-webdriver");
-const assert = require("assert")
+const assert = require("assert");
+var should = require("chai").should();
+// var assert_chai = require("chai").assert();
+// var expect = require("chai").expect();
 
 
 async function example() {
@@ -18,12 +21,17 @@ async function example() {
     await driver.findElement(By.xpath("/html/body/div/div/form/div[1]/div/div/input")).sendKeys("Franklin", Key.RETURN);
     await driver.sleep(2000);
     
-    //assert
+    //assert def
     let petName = await driver.findElement(By.xpath("/html/body/div/div/table[2]/tbody/tr/td[1]/dl/dd[1]")).getText()
         .then(function(value) {
             return value;
         })
-    assert.strictEqual(petName, "Leo");
+
+    //assert plain selenium
+    //assert.strictEqual(petName, "Leo");
+
+    //assert chai
+    petName.should.equal("Leo");
 
     //close a browser
     await driver.quit();

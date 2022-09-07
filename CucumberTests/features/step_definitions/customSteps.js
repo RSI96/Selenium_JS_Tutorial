@@ -3,16 +3,19 @@ const {expect} = require('chai')
 const { By, Key } = require("selenium-webdriver");
 const { Builder } = require("selenium-webdriver");
 
-let driver = new Builder().forBrowser("chrome").build();
+
 
 let sum = 0;
+let driver;
 
-Before(function() {
+Before(async function() {
     console.log('----------before hook----------')
+    driver = await new Builder().forBrowser("chrome").build();
 });
 
-After(function() {
+After(async function() {
     console.log('----------after hook----------')
+    await driver.quit();
 });
 
 When('I add {int} and {int}', function (int, int2) {
@@ -41,5 +44,5 @@ Then('I should see doggos', async function () {
         return value;
     })
     expect(doggos).equal("Obrazy dla doggo");
-    await driver.quit();
+    
 });

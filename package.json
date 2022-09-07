@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --no-timeouts --parallel --reporter mochawesome --require mochawesome/register 'tests/*.js'",
-    "test_cucumber": "node_modules/.bin/cucumber-js -f @cucumber/pretty-formatter CucumberTests/features/test.feature"
+    "test_cucumber": "node_modules/.bin/cucumber-js -f @cucumber/pretty-formatter CucumberTests/features/*.feature"
   },
   "repository": {
     "type": "git",

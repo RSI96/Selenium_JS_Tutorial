@@ -4,7 +4,8 @@
   "description": "This repository contains files from 'Selenium with JavaScript' tutorial.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --no-timeouts --parallel --reporter mochawesome --require mochawesome/register 'tests/*.js'"
+    "test": "mocha --no-timeouts --parallel --reporter mochawesome --require mochawesome/register 'tests/*.js'",
+    "test_cucumber": "node_modules/.bin/cucumber-js -f @cucumber/pretty-formatter CucumberTests/features/test.feature"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/RSI96/Selenium_JS_Tutorial#readme",
   "dependencies": {
+    "@cucumber/cucumber": "^8.5.2",
+    "@cucumber/pretty-formatter": "^1.0.0",
     "chai": "^4.3.6",
     "mocha": "^10.0.0",
     "mochawesome": "^7.1.3",
